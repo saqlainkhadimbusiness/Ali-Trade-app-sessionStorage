@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            // sessionStorage.setItem("stored", 1);
+
+            var current_date_today = new Date();
+            sessionStorage.setItem("stored", current_date_today);
+            var sessiondate = sessionStorage.getItem("stored");
+            sessiondateobj = new Date(sessiondate);
+            var current_date = new Date();
+            var last_month = new Date(current_date.setMonth(current_date.getMonth() - 1));
+            var last_month = new Date(current_date.setMonth(current_date.getMonth() - 1));
+
+
+            console.log(sessiondateobj);
+            console.log(last_month);
+
+            if (last_month < sessiondateobj) {
+                console.log("last months is small, invalid sell");
+
+            }
+            if (last_month > sessiondateobj) {
+                console.log("Curent date is small , valid sell");
+            }
+
+        });
+    </script>
+</body>
+
+</html>

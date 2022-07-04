@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- datatables.html  21 Nov 2019 03:55:21 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title> Stock Trading App</title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="assets/css/app.min.css">
+    <link rel="stylesheet" href="assets/bundles/datatables/datatables.min.css">
+    <link rel="stylesheet" href="assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+                <div class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li>
+                            <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                          collapse-btn"> <i data-feather="align-justify"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav navbar-right">
+                    <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+
+
+                        <div class="dropdown-footer text-center">
+                            <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right pullDown">
+                            <div class="dropdown-title">Local User`</div>
+                            <!-- <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+										fa-user"></i> Profile
+                            </a> -->
+                            <div class="dropdown-divider"></div>
+                            <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="index.html"> <img alt="image" src="assets/img/logo.png" class="header-logo" /> <span class="logo-name">Stock Trading </span>
+                        </a>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Main</li>
+                        <li class="dropdown">
+                            <a href="market.html" class="nav-link"><i data-feather="monitor"></i><span>Market</span></a>
+                            <a href="holdings.html" class="nav-link"><i data-feather="briefcase"></i><span>My Holdings</span></a>
+                        </li>
+
+
+                    </ul>
+                </aside>
+            </div>
+            <!-- Main Content -->
+            <div class="main-content ">
+                <section class="section ">
+                    <div class="section-body ">
+                        <div class="row ">
+                            <div class="col-12 ">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4>My Holdings</h4>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="table-responsive ">
+
+                                            <table class="table table-striped " id="table-1 ">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Stock</th>
+                                                        <th>tiker</th>
+                                                        <th>date of purchase</th>
+                                                        <th>Qty.</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="holdings">
+                                                    <tr class="row-1 ">
+                                                        <td class="symbol ">Oxy</td>
+                                                        <td>Occidental Petrolium corporation</td>
+                                                        <td>$19.6</td>
+                                                        <td> <button class="btn btn-danger " id="1 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-2 ">
+                                                        <td class="symbol ">A</td>
+                                                        <td>Agilent Technologies</td>
+                                                        <td>$87.6</td>
+                                                        <td> <button class="btn btn-danger " id="2 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-3 ">
+                                                        <td class="symbol ">AB</td>
+                                                        <td>Alliancebernstein Holding LP</td>
+                                                        <td>$65.6</td>
+                                                        <td> <button class="btn btn-danger " id="3 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-4 ">
+                                                        <td class="symbol ">OAPHxy</td>
+                                                        <td>Amphenol Corp</td>
+                                                        <td>$9.6</td>
+                                                        <td> <button class="btn btn-danger " id="4 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-5 ">
+                                                        <td class="symbol ">APS.U</td>
+                                                        <td>Apollo Strategic Growth Capital Unit</td>
+                                                        <td>$59.6</td>
+                                                        <td> <button class="btn btn-danger " id="5 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-6 ">
+                                                        <td class="symbol ">AWS</td>
+                                                        <td>Aris Water Solutions Inc Cl A</td>
+                                                        <td>$19</td>
+                                                        <td> <button class="btn btn-danger " id="6 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-7 ">
+                                                        <td class="symbol ">AQNA</td>
+                                                        <td>Algonquin Power & Utilities Corp</td>
+                                                        <td>$76.6</td>
+                                                        <td> <button class="btn btn-danger " id="7 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-8 ">
+                                                        <td class="symbol ">ARDC</td>
+                                                        <td>Ares Dynamic Credit Allocation</td>
+                                                        <td>$6</td>
+                                                        <td> <button class="btn btn-danger " id="8 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-9 ">
+                                                        <td class="symbol ">AZZ</td>
+                                                        <td>Azz Inc</td>
+                                                        <td>$9.6</td>
+                                                        <td> <button class="btn btn-danger " id="9 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-10 ">
+                                                        <td class="symbol ">AVAN</td>
+                                                        <td>Avanti Acquisition Corp Cl A</td>
+                                                        <td>$50</td>
+                                                        <td> <button class="btn btn-danger " id="10 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                    <tr class="row-11 ">
+                                                        <td class="symbol ">IOS</td>
+                                                        <td>MACOS</td>
+                                                        <td>$500</td>
+                                                        <td> <button class="btn btn-danger " id="11 " data-toggle="modal " data-target="#myModal ">Sell</button> </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+            <footer class="main-footer ">
+                <div class="footer-left ">
+                    <a href=" https://wa.me/+923090933228 ">Muhammad Saqlain Khadim</a></a>
+                </div>
+                <div class="footer-right ">
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- General JS Scripts -->
+    <script src="assets/js/app.min.js "></script>
+    <!-- JS Libraies -->
+    <script src="assets/bundles/datatables/datatables.min.js "></script>
+    <script src="assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js "></script>
+    <script src="assets/bundles/jquery-ui/jquery-ui.min.js "></script>
+    <!-- Page Specific JS File -->
+    <script src="assets/js/page/datatables.js "></script>
+    <!-- Template JS File -->
+    <script src="assets/js/scripts.js "></script>
+    <!-- Custom JS File -->
+    <script src="js/market.js "></script>
+
+</body>
+
+
+<!-- datatables.html  21 Nov 2019 03:55:25 GMT -->
+
+</html>
